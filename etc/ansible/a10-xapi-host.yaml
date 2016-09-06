@@ -1,0 +1,11 @@
+# change the systemname
+- name: change the systemname
+  hosts: adc
+  tasks:
+    - a10_hostname:
+        host: "{{ inventory_hostname }}"
+        username: admin
+        password: a10
+        systemname: test7
+        state: present
+        validate_certs: false
