@@ -1,0 +1,11 @@
+# New system name
+- debug: msg="START a10_hostname.yaml"
+- name: new system name
+  a10_hostname:
+        host: "{{ inventory_hostname }}"
+        username: admin
+        password: a10
+        systemname: test4
+        state: present
+        validate_certs: false
+- debug: msg="STOP a10_hostname.yaml"
