@@ -1,5 +1,5 @@
 # Create a new server
-- name: test
+- name: Create a new server
   hosts: adc
   tasks:
     - a10_server:
