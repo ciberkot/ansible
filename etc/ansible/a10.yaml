@@ -1,0 +1,10 @@
+---
+- hosts: adc
+  gather_facts: no
+  connection: local
+
+  vars:
+    limit_to: "*"
+
+  roles:
+    - { role: a10_adc, when: "limit_to in ['*', 'a10_adc']" }
