@@ -1,0 +1,19 @@
+# Create a new server
+- name: test
+  hosts: adc
+  tasks:
+    - a10_server:
+        host: "{{ inventory_hostname }}"
+        username: admin
+        password: a10
+        server: test
+        validate_certs: false
+        state: present
+        server_ip: 1.1.1.100
+        server_ports:
+          - port-number: 8080
+            protocol: tcp
+          - port-number: 8443
+            protocol: TCP
+          - port-number: 80
+            protocol: TCP
