@@ -1,6 +1,7 @@
 # change the systemname
 - name: change the systemname
   hosts: adc
+  connection: local
   tasks:
     - a10_hostname:
         host: "{{ inventory_hostname }}"
