@@ -1,6 +1,7 @@
 # Create a new server
 - name: Create a new server
   hosts: adc
+  connection: local
   tasks:
     - a10_server:
         host: "{{ inventory_hostname }}"
