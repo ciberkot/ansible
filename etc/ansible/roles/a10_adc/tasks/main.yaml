@@ -1,0 +1,3 @@
+---
+- { include: a10_server.yaml, tags: ['axapi'] }
+- { include: a10_hostname.yaml, tags: ['axapi'] }
